@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="114" height="114" viewBox="0 0 114 114">
+  <defs>
+    <filter id="Ellipse_1" x="0" y="0" width="114" height="114" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="picto-boussole" transform="translate(-1143 -412)">
+    <g transform="matrix(1, 0, 0, 1, 1143, 412)" filter="url(#Ellipse_1)">
+      <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="48" cy="48" r="48" transform="translate(9 6)" fill="#c11832"/>
+    </g>
+    <path id="Tracé_125" data-name="Tracé 125" d="M78.975,41.494,54.051,33.829l7.358-12.26-12.26,7.358L41.487,4,33.825,28.928l-12.26-7.358,7.358,12.26L4,41.494l24.924,7.663L21.565,61.405l12.26-7.346,7.662,24.916,7.662-24.916,12.26,7.346L54.051,49.157l24.924-7.663M41.487,74.709V41.487L33.62,49.3l-25.356-7.8,33.223-.007-7.8-7.862,7.8-25.362V41.487l7.8-7.8,25.344,7.8-33.147-.007,7.8,7.875Z" transform="translate(1158.513 423.513)" fill="#fff"/>
+  </g>
+</svg>

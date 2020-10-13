@@ -1,0 +1,148 @@
+body.home {
+  article.page {
+    background-color: $alefpa-blue;
+  }
+
+  .inner {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .entry-title {
+    color: $white;
+    font-size: $font-size-base * 3;
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * 3.875;
+    }
+
+    font-weight: $font-weight-normal;
+    text-align: center;
+    text-transform: none;
+  }
+
+  .wp-block-media-text {
+    position: relative;
+    width: 100vw;
+    @include media-breakpoint-up(sm) {
+      width: 44%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 330px;
+    }
+
+    margin: $spacer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      top: -($spacer * 1.5);
+      left: -($spacer * 1.5);
+      z-index: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: transparent;
+    }
+
+    &.ecologie {
+      .wp-block-media-text__content {
+        h2 {
+          color: #49c836;
+        }
+      }
+
+      &::before {
+        background-image: url("../img/picto-arbre.svg");
+      }
+    }
+
+    &.vieillissement {
+      .wp-block-media-text__content {
+        h2 {
+          color: #6b4b2d;
+        }
+      }
+
+      &::before {
+        background-image: url("../img/picto-vieillir.svg");
+      }
+    }
+
+    &.numerique {
+      .wp-block-media-text__content {
+        h2 {
+          color: $medico-social;
+        }
+      }
+
+      &::before {
+        background-image: url("../img/picto-wifi.svg");
+      }
+    }
+
+    &.migrations {
+      .wp-block-media-text__content {
+        h2 {
+          color: #c11832;
+        }
+      }
+
+      &::before {
+        background-image: url("../img/picto-boussole.svg");
+      }
+    }
+
+    &.solidarite {
+      .wp-block-media-text__content {
+        h2 {
+          color: #9640cc;
+        }
+      }
+
+      &::before {
+        background-image: url("../img/picto-mains.svg");
+      }
+    }
+  }
+
+  .wp-block-media-text__media {
+    height: 100%;
+
+    img {
+      min-height: 350px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .wp-block-media-text__content {
+    width: 100%;
+    padding: $spacer;
+    background-color: $white;
+    text-align: center;
+
+    h2 {
+      margin: 0;
+      font-size: $font-size-body;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+      line-height: $headings-line-height;
+    }
+  }
+
+  h3 {
+    color: $white;
+    font-size: $font-size-base * 3;
+  }
+}

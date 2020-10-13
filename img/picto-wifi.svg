@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="114" height="114" viewBox="0 0 114 114">
+  <defs>
+    <filter id="Ellipse_1" x="0" y="0" width="114" height="114" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="picto-wifi" transform="translate(-17 -449)">
+    <g transform="matrix(1, 0, 0, 1, 17, 449)" filter="url(#Ellipse_1)">
+      <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="48" cy="48" r="48" transform="translate(9 6)" fill="#009ee2"/>
+    </g>
+    <g id="Groupe_25" data-name="Groupe 25" transform="translate(12.081 449.324)">
+      <path id="Tracé_126" data-name="Tracé 126" d="M356.858,510.073a6.755,6.755,0,1,1-9.553,0A6.756,6.756,0,0,1,356.858,510.073Z" transform="translate(-290.164 -440.66)" fill="#fff"/>
+      <path id="Tracé_127" data-name="Tracé 127" d="M283.1,352.07a20.459,20.459,0,0,0-28.933,0l5.055,5.054a13.309,13.309,0,0,1,18.823,0h0l5.055-5.054Z" transform="translate(-206.718 -292.347)" fill="#fff"/>
+      <path id="Tracé_128" data-name="Tracé 128" d="M165.281,186.407a33.744,33.744,0,0,0-24.017,9.947l5.054,5.054a26.822,26.822,0,0,1,37.928,0l5.054-5.054h0A33.75,33.75,0,0,0,165.281,186.407Z" transform="translate(-103.364 -146.184)" fill="#fff"/>
+      <path id="Tracé_129" data-name="Tracé 129" d="M95.488,40.62a47.476,47.476,0,0,0-67.14,0L33.4,45.672a40.331,40.331,0,0,1,57.032,0l5.056-5.054Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>
