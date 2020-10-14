@@ -14585,7 +14585,7 @@ body.home .wp-block-media-text.ecologie::before {
   background-image: url("../img/picto-arbre.svg");
 }
 body.home .wp-block-media-text.vieillissement .wp-block-media-text__content h2 {
-  color: #6b4b2d;
+  color: #e7511e;
 }
 body.home .wp-block-media-text.vieillissement::before {
   background-image: url("../img/picto-vieillir.svg");
