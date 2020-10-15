@@ -6,6 +6,7 @@
 
 #page-wrapper {
   flex: 1 0 auto;
+  overflow-x: hidden;
 
   @include media-breakpoint-up(lg) {
     padding-top: 0;

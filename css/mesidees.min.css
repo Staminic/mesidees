@@ -14212,6 +14212,7 @@ figcaption {
 
 #page-wrapper {
   flex: 1 0 auto;
+  overflow-x: hidden;
 }
 @media (min-width: 992px) {
   #page-wrapper {
@@ -14320,7 +14321,8 @@ article.page .wp-post-image {
   }
   [class*=navbar-expand] .navbar-nav {
     width: 100%;
-    background-color: #009ee0;
+    background-color: transparent;
+    border: 1px solid #ffffff;
   }
   [class*=navbar-expand] .navbar-nav .menu-item {
     flex: 1 0 auto;
@@ -14357,11 +14359,8 @@ article.page .wp-post-image {
   [class*=navbar-expand] .navbar-nav .menu-item:nth-child(2) .nav-link span {
     padding-left: 0;
   }
-  [class*=navbar-expand] .navbar-nav .menu-item:nth-last-child(2) .nav-link span {
-    border: none;
-  }
   [class*=navbar-expand] .navbar-nav .menu-item:last-child {
-    background-color: #e7511e;
+    background-color: transparent;
   }
   [class*=navbar-expand] .navbar-nav .menu-item:last-child .nav-link span {
     border: none;
@@ -14395,13 +14394,13 @@ article.page .wp-post-image {
 }
 .widget.off_canvas_control .ocs-toggle-menu-principal {
   padding: 5px;
-  background-color: #fff;
-  border: 2px solid #f29400;
+  background-color: #00447a;
+  border: 2px solid #ffffff;
   border-radius: 3px;
   line-height: 1;
 }
 .widget.off_canvas_control .ocs-toggle-menu-principal span {
-  color: #f29400;
+  color: #ffffff;
 }
 @media (min-width: 992px) {
   .widget.off_canvas_control {
@@ -14413,7 +14412,7 @@ article.page .wp-post-image {
   padding: 2rem;
   background-color: #f29400;
 }
-#ocs-menu-principal.ocs-menu-principal #custom_html-8.widget {
+#ocs-menu-principal.ocs-menu-principal #custom_html-2.widget {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -14421,16 +14420,16 @@ article.page .wp-post-image {
   padding: 0;
   list-style-type: none;
 }
-#ocs-menu-principal.ocs-menu-principal #custom_html-8.widget .ocs-close-menu-principal {
+#ocs-menu-principal.ocs-menu-principal #custom_html-2.widget .ocs-close-menu-principal {
   background-color: #f29400;
 }
-#ocs-menu-principal.ocs-menu-principal #custom_html-8.widget .ocs-close-menu-principal .inner {
+#ocs-menu-principal.ocs-menu-principal #custom_html-2.widget .ocs-close-menu-principal .inner {
   padding: 5px;
   border: 2px solid #fff;
   border-radius: 3px;
   line-height: 1;
 }
-#ocs-menu-principal.ocs-menu-principal #custom_html-8.widget .ocs-close-menu-principal .inner span {
+#ocs-menu-principal.ocs-menu-principal #custom_html-2.widget .ocs-close-menu-principal .inner span {
   color: #fff;
 }
 #ocs-menu-principal.ocs-menu-principal .widget.widget_nav_menu .widgettitle {

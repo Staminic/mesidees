@@ -9,14 +9,16 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
+<article <?php post_class('pt-4'); ?> id="post-<?php the_ID(); ?>">
 	<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 
 	<div class="inner">
 
-		<div class="entry-content">
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header>
 
+		<div class="entry-content">
 			<?php the_content(); ?>
 
 			<?php
@@ -27,15 +29,11 @@ defined( 'ABSPATH' ) || exit;
 				)
 			);
 			?>
-
 		</div>
 
 		<footer class="entry-footer">
-
 			<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
-
 		</footer>
 
 	</div>
-
 </article>

@@ -7,13 +7,13 @@
 
   .ocs-toggle-menu-principal {
     padding: 5px;
-    background-color: #fff;
-    border: 2px solid $sanitaire;
+    background-color: $alefpa-blue;
+    border: 2px solid $white;
     border-radius: 3px;
     line-height: 1;
 
     span {
-      color: $sanitaire;
+      color: $white;
     }
   }
 
@@ -27,7 +27,7 @@
     padding: $spacer * 2;
     background-color: $sanitaire;
 
-    #custom_html-8.widget {
+    #custom_html-2.widget {
       position: absolute;
       top: 15px;
       right: 15px;

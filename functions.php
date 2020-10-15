@@ -115,3 +115,9 @@ if ( ! function_exists( 'mesidees_widgets_init' ) ) {
         );
     }
 }
+
+// IdeaPush
+add_filter( "idea_push_change_author_link", "idea_push_change_author_link_callback", 10, 1 );
+function idea_push_change_author_link_callback( $userId ) { 
+    return "#"; 
+}

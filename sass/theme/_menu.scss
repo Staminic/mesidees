@@ -24,7 +24,8 @@
 
     .navbar-nav {
       width: 100%;
-      background-color: $medico-social;
+      background-color: transparent;
+      border: 1px solid $white;
 
       .menu-item {
         // display: flex;
@@ -79,16 +80,16 @@
           }
         }
 
-        &:nth-last-child(2) {
-          .nav-link {
-            span {
-              border: none;
-            }
-          }
-        }
+        // &:nth-last-child(2) {
+        //   .nav-link {
+        //     span {
+        //       border: none;
+        //     }
+        //   }
+        // }
 
         &:last-child {
-          background-color: $social;
+          background-color: transparent;
 
           .nav-link {
             span {
