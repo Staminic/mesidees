@@ -14634,4 +14634,51 @@ body.home h3 {
   color: #ffffff;
   font-size: 3rem;
 }
+
+.idea-item-tag::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: -6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+.idea-item-tag.transition-ecologique {
+  border-color: #49c836 !important;
+  color: #49c836 !important;
+}
+.idea-item-tag.transition-ecologique::before {
+  background-image: url("../img/picto-arbre.svg");
+}
+.idea-item-tag.vieillissement {
+  border-color: #e7511e !important;
+  color: #e7511e !important;
+}
+.idea-item-tag.vieillissement::before {
+  background-image: url("../img/picto-vieillir.svg");
+}
+.idea-item-tag.transformation-numerique {
+  border-color: #009ee0 !important;
+  color: #009ee0 !important;
+}
+.idea-item-tag.transformation-numerique::before {
+  background-image: url("../img/picto-wifi.svg");
+}
+.idea-item-tag.migrations {
+  border-color: #c11832 !important;
+  color: #c11832 !important;
+}
+.idea-item-tag.migrations::before {
+  background-image: url("../img/picto-boussole.svg");
+}
+.idea-item-tag.societe-inclusive {
+  border-color: #9640cc !important;
+  color: #9640cc !important;
+}
+.idea-item-tag.societe-inclusive::before {
+  background-image: url("../img/picto-mains.svg");
+}
 /*# sourceMappingURL=mesidees.min.css.map */

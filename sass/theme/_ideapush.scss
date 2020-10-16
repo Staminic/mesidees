@@ -1,0 +1,58 @@
+.idea-item-tag {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -6px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+  }
+
+  &.transition-ecologique {
+    border-color: $ecologie !important;
+    color: $ecologie !important;
+
+    &::before {
+      background-image: url("../img/picto-arbre.svg");
+    }
+  }
+
+  &.vieillissement {
+    border-color: $vieillissement !important;
+    color: $vieillissement !important;
+
+    &::before {
+      background-image: url("../img/picto-vieillir.svg");
+    }
+  }
+
+  &.transformation-numerique {
+    border-color: $numerique !important;
+    color: $numerique !important;
+
+    &::before {
+      background-image: url("../img/picto-wifi.svg");
+    }
+  }
+
+  &.migrations {
+    border-color: $migrations !important;
+    color: $migrations !important;
+
+    &::before {
+      background-image: url("../img/picto-boussole.svg");
+    }
+  }
+
+  &.societe-inclusive {
+    border-color: $solidarite !important;
+    color: $solidarite !important;
+
+    &::before {
+      background-image: url("../img/picto-mains.svg");
+    }
+  }
+}
