@@ -49,30 +49,32 @@ body.home {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      background-color: transparent;
+      border-radius: 50%;
     }
 
     &.ecologie {
       .wp-block-media-text__content {
         h2 {
-          color: #49c836;
+          color: $ecologie;
         }
       }
 
       &::before {
-        background-image: url("../img/picto-arbre.svg");
+        background-image: url("../img/picto-arbre.png");
+        background-color: $ecologie;
       }
     }
 
     &.vieillissement {
       .wp-block-media-text__content {
         h2 {
-          color: $social;
+          color: $vieillissement;
         }
       }
 
       &::before {
-        background-image: url("../img/picto-vieillir.svg");
+        background-image: url("../img/picto-vieillir.png");
+        background-color: $vieillissement;
       }
     }
 
@@ -84,31 +86,34 @@ body.home {
       }
 
       &::before {
-        background-image: url("../img/picto-wifi.svg");
+        background-image: url("../img/picto-wifi.png");
+        background-color: $medico-social;
       }
     }
 
     &.migrations {
       .wp-block-media-text__content {
         h2 {
-          color: #c11832;
+          color: $migrations;
         }
       }
 
       &::before {
-        background-image: url("../img/picto-boussole.svg");
+        background-image: url("../img/picto-boussole.png");
+        background-color: $migrations;
       }
     }
 
     &.solidarite {
       .wp-block-media-text__content {
         h2 {
-          color: #9640cc;
+          color: $solidarite;
         }
       }
 
       &::before {
-        background-image: url("../img/picto-mains.svg");
+        background-image: url("../img/picto-mains.png");
+        background-color: $solidarite;
       }
     }
   }
@@ -144,5 +149,19 @@ body.home {
   h3 {
     color: $white;
     font-size: $font-size-base * 3;
+  }
+}
+
+.cta {
+  a {
+    @extend .btn;
+    @extend .btn-lg;
+
+    font-size: $h1-font-size;
+    font-weight: $font-weight-bold;
+    background-color: $white;
+    border-radius: 100px;
+    color: $alefpa-blue !important;
+    text-decoration: none !important;
   }
 }

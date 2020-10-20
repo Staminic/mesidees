@@ -2860,7 +2860,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
   }
 }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .cta a, .wpcf7 input[type=submit] {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -2877,26 +2877,28 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media screen and (prefers-reduced-motion: reduce) {
-  .btn, .wpcf7 input[type=submit] {
+  .btn, .cta a, .wpcf7 input[type=submit] {
     transition: none;
   }
 }
-.btn:hover, .wpcf7 input[type=submit]:hover {
+.btn:hover, .cta a:hover, .wpcf7 input[type=submit]:hover {
   color: #212529;
   text-decoration: none;
 }
-.btn:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .wpcf7 input.focus[type=submit] {
+.btn:focus, .cta a:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .cta a.focus, .wpcf7 input.focus[type=submit] {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 68, 122, 0.25);
 }
-.btn.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .wpcf7 input[type=submit]:disabled {
+.btn.disabled, .cta a.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .cta a:disabled, .wpcf7 input[type=submit]:disabled {
   opacity: 0.65;
 }
-.btn:not(:disabled):not(.disabled), .wpcf7 input[type=submit]:not(:disabled):not(.disabled) {
+.btn:not(:disabled):not(.disabled), .cta a:not(:disabled):not(.disabled), .wpcf7 input[type=submit]:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, .cta a.disabled,
+fieldset:disabled a.btn,
+fieldset:disabled .cta a,
+.cta fieldset:disabled a {
   pointer-events: none;
 }
 
@@ -3385,14 +3387,14 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+.btn-lg, .cta a, .btn-group-lg > .btn, .cta .btn-group-lg > a, .wpcf7 .btn-group-lg > input[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .cta .btn-group-sm > a, .wpcf7 .btn-group-sm > input[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3689,23 +3691,28 @@ input[type=button].btn-block {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .wpcf7 .btn-group > input[type=submit],
+.btn-group > .btn, .cta .btn-group > a, .wpcf7 .btn-group > input[type=submit],
 .btn-group-vertical > .btn,
+.cta .btn-group-vertical > a,
 .wpcf7 .btn-group-vertical > input[type=submit] {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover,
+.btn-group > .btn:hover, .cta .btn-group > a:hover, .wpcf7 .btn-group > input[type=submit]:hover,
 .btn-group-vertical > .btn:hover,
+.cta .btn-group-vertical > a:hover,
 .wpcf7 .btn-group-vertical > input[type=submit]:hover {
   z-index: 1;
 }
-.btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit],
+.btn-group > .btn:focus, .cta .btn-group > a:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .cta .btn-group > a:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .cta .btn-group > a.active, .wpcf7 .btn-group > input.active[type=submit],
 .btn-group-vertical > .btn:focus,
+.cta .btn-group-vertical > a:focus,
 .wpcf7 .btn-group-vertical > input[type=submit]:focus,
 .btn-group-vertical > .btn:active,
+.cta .btn-group-vertical > a:active,
 .wpcf7 .btn-group-vertical > input[type=submit]:active,
 .btn-group-vertical > .btn.active,
+.cta .btn-group-vertical > a.active,
 .wpcf7 .btn-group-vertical > input.active[type=submit] {
   z-index: 1;
 }
@@ -3719,18 +3726,20 @@ input[type=button].btn-block {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
+.btn-group > .btn:not(:first-child), .cta .btn-group > a:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .cta .btn-group > a:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
+.cta .btn-group > .btn-group:not(:last-child) > a,
 .wpcf7 .btn-group > .btn-group:not(:last-child) > input[type=submit] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
+.btn-group > .btn:not(:first-child), .cta .btn-group > a:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
+.cta .btn-group > .btn-group:not(:first-child) > a,
 .wpcf7 .btn-group > .btn-group:not(:first-child) > input[type=submit] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3747,12 +3756,12 @@ input[type=button].btn-block {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .cta .btn-group-sm > a + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .cta a + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .cta .btn-group-lg > a + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3762,34 +3771,38 @@ input[type=button].btn-block {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .wpcf7 .btn-group-vertical > input[type=submit],
+.btn-group-vertical > .btn, .cta .btn-group-vertical > a, .wpcf7 .btn-group-vertical > input[type=submit],
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .cta .btn-group-vertical > a:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .cta .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.cta .btn-group-vertical > .btn-group:not(:last-child) > a,
 .wpcf7 .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit] {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .cta .btn-group-vertical > a:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.cta .btn-group-vertical > .btn-group:not(:first-child) > a,
 .wpcf7 .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group-toggle > .btn, .wpcf7 .btn-group-toggle > input[type=submit],
+.btn-group-toggle > .btn, .cta .btn-group-toggle > a, .wpcf7 .btn-group-toggle > input[type=submit],
 .btn-group-toggle > .btn-group > .btn,
+.cta .btn-group-toggle > .btn-group > a,
 .wpcf7 .btn-group-toggle > .btn-group > input[type=submit] {
   margin-bottom: 0;
 }
-.btn-group-toggle > .btn input[type=radio], .wpcf7 .btn-group-toggle > input[type=submit] input[type=radio],
+.btn-group-toggle > .btn input[type=radio], .cta .btn-group-toggle > a input[type=radio], .wpcf7 .btn-group-toggle > input[type=submit] input[type=radio],
 .btn-group-toggle > .btn input[type=checkbox],
+.cta .btn-group-toggle > a input[type=checkbox],
 .wpcf7 .btn-group-toggle > input[type=submit] input[type=checkbox],
 .btn-group-toggle > .btn-group > .btn input[type=radio],
 .btn-group-toggle > .btn-group > .btn input[type=checkbox] {
@@ -4417,39 +4430,65 @@ input[type=button].btn-block {
 .input-group-append {
   display: flex;
 }
-.input-group-prepend .btn, .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit],
+.input-group-prepend .btn, .input-group-prepend .cta a, .cta .input-group-prepend a, .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit],
 .input-group-append .btn,
+.input-group-append .cta a,
+.cta .input-group-append a,
 .input-group-append .wpcf7 input[type=submit],
 .wpcf7 .input-group-append input[type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group-prepend .btn:focus, .input-group-prepend .wpcf7 input[type=submit]:focus, .wpcf7 .input-group-prepend input[type=submit]:focus,
+.input-group-prepend .btn:focus, .input-group-prepend .cta a:focus, .cta .input-group-prepend a:focus, .input-group-prepend .wpcf7 input[type=submit]:focus, .wpcf7 .input-group-prepend input[type=submit]:focus,
 .input-group-append .btn:focus,
+.input-group-append .cta a:focus,
+.cta .input-group-append a:focus,
 .input-group-append .wpcf7 input[type=submit]:focus,
 .wpcf7 .input-group-append input[type=submit]:focus {
   z-index: 3;
 }
-.input-group-prepend .btn + .btn, .input-group-prepend .wpcf7 input[type=submit] + .btn, .wpcf7 .input-group-prepend input[type=submit] + .btn, .input-group-prepend .wpcf7 .btn + input[type=submit], .wpcf7 .input-group-prepend .btn + input[type=submit], .input-group-prepend .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .input-group-prepend input[type=submit] + input[type=submit],
+.input-group-prepend .btn + .btn, .input-group-prepend .cta a + .btn, .cta .input-group-prepend a + .btn, .input-group-prepend .cta .btn + a, .cta .input-group-prepend .btn + a, .input-group-prepend .cta a + a, .cta .input-group-prepend a + a, .input-group-prepend .wpcf7 input[type=submit] + .btn, .input-group-prepend .wpcf7 .cta input[type=submit] + a, .cta .input-group-prepend .wpcf7 input[type=submit] + a, .wpcf7 .input-group-prepend input[type=submit] + .btn, .wpcf7 .input-group-prepend .cta input[type=submit] + a, .cta .wpcf7 .input-group-prepend input[type=submit] + a, .input-group-prepend .wpcf7 .btn + input[type=submit], .input-group-prepend .wpcf7 .cta a + input[type=submit], .cta .input-group-prepend .wpcf7 a + input[type=submit], .wpcf7 .input-group-prepend .btn + input[type=submit], .wpcf7 .input-group-prepend .cta a + input[type=submit], .cta .wpcf7 .input-group-prepend a + input[type=submit], .input-group-prepend .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .input-group-prepend input[type=submit] + input[type=submit],
 .input-group-prepend .btn + .input-group-text,
+.input-group-prepend .cta a + .input-group-text,
+.cta .input-group-prepend a + .input-group-text,
 .input-group-prepend .wpcf7 input[type=submit] + .input-group-text,
 .wpcf7 .input-group-prepend input[type=submit] + .input-group-text,
 .input-group-prepend .input-group-text + .input-group-text,
 .input-group-prepend .input-group-text + .btn,
+.input-group-prepend .cta .input-group-text + a,
+.cta .input-group-prepend .input-group-text + a,
 .input-group-prepend .wpcf7 .input-group-text + input[type=submit],
 .wpcf7 .input-group-prepend .input-group-text + input[type=submit],
 .input-group-append .btn + .btn,
+.input-group-append .cta a + .btn,
+.cta .input-group-append a + .btn,
+.input-group-append .cta .btn + a,
+.cta .input-group-append .btn + a,
+.input-group-append .cta a + a,
+.cta .input-group-append a + a,
 .input-group-append .wpcf7 input[type=submit] + .btn,
+.input-group-append .wpcf7 .cta input[type=submit] + a,
+.cta .input-group-append .wpcf7 input[type=submit] + a,
 .wpcf7 .input-group-append input[type=submit] + .btn,
+.wpcf7 .input-group-append .cta input[type=submit] + a,
+.cta .wpcf7 .input-group-append input[type=submit] + a,
 .input-group-append .wpcf7 .btn + input[type=submit],
+.input-group-append .wpcf7 .cta a + input[type=submit],
+.cta .input-group-append .wpcf7 a + input[type=submit],
 .wpcf7 .input-group-append .btn + input[type=submit],
+.wpcf7 .input-group-append .cta a + input[type=submit],
+.cta .wpcf7 .input-group-append a + input[type=submit],
 .input-group-append .wpcf7 input[type=submit] + input[type=submit],
 .wpcf7 .input-group-append input[type=submit] + input[type=submit],
 .input-group-append .btn + .input-group-text,
+.input-group-append .cta a + .input-group-text,
+.cta .input-group-append a + .input-group-text,
 .input-group-append .wpcf7 input[type=submit] + .input-group-text,
 .wpcf7 .input-group-append input[type=submit] + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
 .input-group-append .input-group-text + .btn,
+.input-group-append .cta .input-group-text + a,
+.cta .input-group-append .input-group-text + a,
 .input-group-append .wpcf7 .input-group-text + input[type=submit],
 .wpcf7 .input-group-append .input-group-text + input[type=submit] {
   margin-left: -1px;
@@ -4527,8 +4566,10 @@ input[type=button].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
+.cta .input-group-lg > .input-group-prepend > a,
 .wpcf7 .input-group-lg > .input-group-prepend > input[type=submit],
 .input-group-lg > .input-group-append > .btn,
+.cta .input-group-lg > .input-group-append > a,
 .wpcf7 .input-group-lg > .input-group-append > input[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -4580,8 +4621,10 @@ input[type=button].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
+.cta .input-group-sm > .input-group-prepend > a,
 .wpcf7 .input-group-sm > .input-group-prepend > input[type=submit],
 .input-group-sm > .input-group-append > .btn,
+.cta .input-group-sm > .input-group-append > a,
 .wpcf7 .input-group-sm > .input-group-append > input[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -4594,24 +4637,28 @@ input[type=button].btn-block {
   padding-right: 1.75rem;
 }
 
-.input-group > .input-group-prepend > .btn, .wpcf7 .input-group > .input-group-prepend > input[type=submit],
+.input-group > .input-group-prepend > .btn, .cta .input-group > .input-group-prepend > a, .wpcf7 .input-group > .input-group-prepend > input[type=submit],
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.cta .input-group > .input-group-append:not(:last-child) > a,
 .wpcf7 .input-group > .input-group-append:not(:last-child) > input[type=submit],
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.cta .input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .wpcf7 .input-group > .input-group-append:last-child > input[type=submit]:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .input-group-append > .btn, .wpcf7 .input-group > .input-group-append > input[type=submit],
+.input-group > .input-group-append > .btn, .cta .input-group > .input-group-append > a, .wpcf7 .input-group > .input-group-append > input[type=submit],
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.cta .input-group > .input-group-prepend:not(:first-child) > a,
 .wpcf7 .input-group > .input-group-prepend:not(:first-child) > input[type=submit],
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.cta .input-group > .input-group-prepend:first-child > a:not(:first-child),
 .wpcf7 .input-group > .input-group-prepend:first-child > input[type=submit]:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
@@ -5793,7 +5840,7 @@ a.badge:hover, a.badge:focus {
   display: none;
 }
 
-.btn .badge, .wpcf7 input[type=submit] .badge {
+.btn .badge, .cta a .badge, .wpcf7 input[type=submit] .badge {
   position: relative;
   top: -1px;
 }
@@ -14243,7 +14290,7 @@ article.page .wp-post-image {
   padding-bottom: 0.3333333333rem;
   background-color: #e5ecf1;
 }
-.header-above .widget_search .btn, .header-above .widget_search .wpcf7 input[type=submit], .wpcf7 .header-above .widget_search input[type=submit] {
+.header-above .widget_search .btn, .header-above .widget_search .cta a, .cta .header-above .widget_search a, .header-above .widget_search .wpcf7 input[type=submit], .wpcf7 .header-above .widget_search input[type=submit] {
   line-height: 0;
 }
 .header-above .alefpa-backlink {
@@ -14575,37 +14622,42 @@ body.home .wp-block-media-text::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: transparent;
+  border-radius: 50%;
 }
 body.home .wp-block-media-text.ecologie .wp-block-media-text__content h2 {
   color: #49c836;
 }
 body.home .wp-block-media-text.ecologie::before {
-  background-image: url("../img/picto-arbre.svg");
+  background-image: url("../img/picto-arbre.png");
+  background-color: #49c836;
 }
 body.home .wp-block-media-text.vieillissement .wp-block-media-text__content h2 {
-  color: #e7511e;
+  color: #6b4b2d;
 }
 body.home .wp-block-media-text.vieillissement::before {
-  background-image: url("../img/picto-vieillir.svg");
+  background-image: url("../img/picto-vieillir.png");
+  background-color: #6b4b2d;
 }
 body.home .wp-block-media-text.numerique .wp-block-media-text__content h2 {
   color: #009ee0;
 }
 body.home .wp-block-media-text.numerique::before {
-  background-image: url("../img/picto-wifi.svg");
+  background-image: url("../img/picto-wifi.png");
+  background-color: #009ee0;
 }
 body.home .wp-block-media-text.migrations .wp-block-media-text__content h2 {
   color: #c11832;
 }
 body.home .wp-block-media-text.migrations::before {
-  background-image: url("../img/picto-boussole.svg");
+  background-image: url("../img/picto-boussole.png");
+  background-color: #c11832;
 }
 body.home .wp-block-media-text.solidarite .wp-block-media-text__content h2 {
   color: #9640cc;
 }
 body.home .wp-block-media-text.solidarite::before {
-  background-image: url("../img/picto-mains.svg");
+  background-image: url("../img/picto-mains.png");
+  background-color: #9640cc;
 }
 body.home .wp-block-media-text__media {
   height: 100%;
@@ -14635,6 +14687,15 @@ body.home h3 {
   font-size: 3rem;
 }
 
+.cta a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: #ffffff;
+  border-radius: 100px;
+  color: #00447a !important;
+  text-decoration: none !important;
+}
+
 .idea-item-tag::before {
   content: "";
   display: inline-block;
@@ -14654,8 +14715,8 @@ body.home h3 {
   background-image: url("../img/picto-arbre.svg");
 }
 .idea-item-tag.vieillissement {
-  border-color: #e7511e !important;
-  color: #e7511e !important;
+  border-color: #6b4b2d !important;
+  color: #6b4b2d !important;
 }
 .idea-item-tag.vieillissement::before {
   background-image: url("../img/picto-vieillir.svg");
@@ -14680,5 +14741,42 @@ body.home h3 {
 }
 .idea-item-tag.societe-inclusive::before {
   background-image: url("../img/picto-mains.svg");
+}
+
+.ideapush-form-custom-field label {
+  color: #a7a9ac;
+  font-size: initial;
+}
+.ideapush-form-custom-field select {
+  color: #a7a9ac !important;
+  font-size: 16px !important;
+}
+.ideapush-form-custom-field select option {
+  color: #a7a9ac !important;
+  font-size: 16px !important;
+}
+.ideapush-form-custom-field select:checked {
+  color: #a7a9ac !important;
+  font-size: 16px !important;
+}
+
+.user-profile-name,
+.idea-author,
+.idea-item h2 a {
+  text-decoration: none !important;
+}
+.user-profile-name:hover,
+.idea-author:hover,
+.idea-item h2 a:hover {
+  color: #e7511e !important;
+  cursor: text;
+}
+
+.idea-author {
+  color: #a7a9ac !important;
+}
+
+.user-profile-name {
+  color: #000 !important;
 }
 /*# sourceMappingURL=mesidees.min.css.map */
