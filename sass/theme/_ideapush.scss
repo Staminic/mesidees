@@ -1,99 +1,115 @@
-.idea-item-tag {
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    vertical-align: -6px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.ideapush-container {
+  display: flex;
+  flex-direction: column;
+
+  .idea-item-tag {
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+    border: none;
+  }
+}
+
+.ideapush-container-ideas,
+.ideapush-container-form {
+  width: auto;
+}
+
+.ideapush-container-form {
+  order: -1;
+  margin-bottom: $spacer * 3;
+}
+
+.ideapush-form-inner {
+  margin: 0;
+}
+
+.dynamic-idea-listing {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $grid-gutter-width;
+  margin-left: -$grid-gutter-width !important;
+}
+
+.idea-item {
+  display: block;
+  width: calc(100% / 3 - #{$grid-gutter-width});
+  margin: 0 0 $grid-gutter-width $grid-gutter-width;
+  padding: 0;
+  border: none;
+
+  .card {
+    height: 100%;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .card-footer,
+  .card-header {
+    border: none;
     background-color: transparent;
   }
 
-  &.transition-ecologique {
-    border-color: $ecologie !important;
-    color: $ecologie !important;
-
-    &::before {
-      background-image: url("../img/picto-arbre.svg");
-    }
-  }
-
-  &.vieillissement {
-    border-color: $vieillissement !important;
-    color: $vieillissement !important;
-
-    &::before {
-      background-image: url("../img/picto-vieillir.svg");
-    }
-  }
-
-  &.transformation-numerique {
-    border-color: $numerique !important;
-    color: $numerique !important;
-
-    &::before {
-      background-image: url("../img/picto-wifi.svg");
-    }
-  }
-
-  &.migrations {
-    border-color: $migrations !important;
-    color: $migrations !important;
-
-    &::before {
-      background-image: url("../img/picto-boussole.svg");
-    }
-  }
-
-  &.societe-inclusive {
-    border-color: $solidarite !important;
-    color: $solidarite !important;
-
-    &::before {
-      background-image: url("../img/picto-mains.svg");
-    }
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0;
   }
 }
 
-.ideapush-form-custom-field {
-  label {
-    color: #a7a9ac;
-    font-size: initial;
-  }
-
-  select {
-    color: #a7a9ac !important;
-    font-size: 16px !important;
-
-    option {
-      color: #a7a9ac !important;
-      font-size: 16px !important;
-    }
-
-    &:checked {
-      color: #a7a9ac !important;
-      font-size: 16px !important;
-    }
+.idea-item {
+  .idea-item-left,
+  .idea-item-right {
+    width: 100%;
   }
 }
 
-.user-profile-name,
-.idea-author,
-.idea-item h2 a {
-  text-decoration: none !important;
-
-  &:hover {
-    color: $social !important;
-    cursor: text;
-  }
+.idea-item-right {
+  order: -1;
 }
 
+.idea-item-right-inner {
+  padding: 0;
+}
+
+.idea-vote-container {
+  width: 80px;
+  height: 80px;
+  margin: $spacer / 2;
+  background-color: $gray-200;
+  border: none;
+  border-radius: 50%;
+}
+
+.ideapush-icon-Tag {
+  &::before {
+    content: none !important;
+  }
+}
+.ideas-that-are-text,
+.ideapush-status-filter,
+.status-container {
+  display: none !important;
+}
+
+.idea-item-date,
 .idea-author {
-  color: #a7a9ac !important;
+  font-size: $font-size-sm;
 }
 
-.user-profile-name {
-  color: $black !important;
+.idea-item-attachment {
+  display: none;
+}
+
+.ideapush-icon-Duplicate {
+  display: none;
+}
+
+.idea-read-more {
+  display: inline-block;
 }

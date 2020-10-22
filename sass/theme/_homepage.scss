@@ -165,3 +165,16 @@ body.home {
     text-decoration: none !important;
   }
 }
+
+.btn-video {
+  border-radius: 100px;
+
+  &::before {
+    content: "\f16a";
+    display: inline-block;
+    margin-right: 0.25rem;
+    vertical-align: -3px;
+    font-family: "FontAwesome";
+    font-size: $h2-font-size;
+  }
+}
