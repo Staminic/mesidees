@@ -91,25 +91,72 @@
     content: none !important;
   }
 }
-.ideas-that-are-text,
-.ideapush-status-filter,
-.status-container {
-  display: none !important;
-}
 
 .idea-item-date,
 .idea-author {
   font-size: $font-size-sm;
 }
 
+.idea-read-more {
+  display: inline-block;
+}
+
+.idea-item-file-download {
+  border: none !important;
+  font-size: $font-size-body !important;
+
+  &::before {
+    content: "\f1c1";
+    display: inline-block;
+    margin-right: 0.25rem;
+    font-family: "FontAwesome";
+  }
+
+  &::after {
+    content: none !important;
+  }
+}
+
+// Hide stuffs
+
+.ideas-that-are-text,
+.ideapush-status-filter,
+.status-container {
+  display: none !important;
+}
+
 .idea-item-attachment {
   display: none;
+}
+
+.idea-item {
+  .idea-item-attachment-file {
+    display: none;
+  }
+}
+
+.idea-item-right-inner {
+  .idea-item-additional-meta {
+    .idea-item-attachment-file {
+      display: none;
+    }
+
+    & ~ .idea-item-additional-meta {
+      .idea-item-attachment-file {
+        display: inline-block;
+      }
+
+      .idea-item-tags {
+        display: none;
+      }
+    }
+  }
 }
 
 .ideapush-icon-Duplicate {
   display: none;
 }
 
-.idea-read-more {
-  display: inline-block;
+.ideapush-icon-File {
+  display: none;
 }

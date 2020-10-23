@@ -15443,18 +15443,50 @@ body.home h3 {
   content: none !important;
 }
 
+.idea-item-date,
+.idea-author {
+  font-size: 0.875rem;
+}
+
+.idea-read-more {
+  display: inline-block;
+}
+
+.idea-item-file-download {
+  border: none !important;
+  font-size: 1.25rem !important;
+}
+.idea-item-file-download::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.25rem;
+  font-family: "FontAwesome";
+}
+.idea-item-file-download::after {
+  content: none !important;
+}
+
 .ideas-that-are-text,
 .ideapush-status-filter,
 .status-container {
   display: none !important;
 }
 
-.idea-item-date,
-.idea-author {
-  font-size: 0.875rem;
+.idea-item-attachment {
+  display: none;
 }
 
-.idea-item-attachment {
+.idea-item .idea-item-attachment-file {
+  display: none;
+}
+
+.idea-item-right-inner .idea-item-additional-meta .idea-item-attachment-file {
+  display: none;
+}
+.idea-item-right-inner .idea-item-additional-meta ~ .idea-item-additional-meta .idea-item-attachment-file {
+  display: inline-block;
+}
+.idea-item-right-inner .idea-item-additional-meta ~ .idea-item-additional-meta .idea-item-tags {
   display: none;
 }
 
@@ -15462,7 +15494,7 @@ body.home h3 {
   display: none;
 }
 
-.idea-read-more {
-  display: inline-block;
+.ideapush-icon-File {
+  display: none;
 }
 /*# sourceMappingURL=mesidees.min.css.map */
